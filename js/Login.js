@@ -5,7 +5,11 @@ function validarUsuario() {
     if ((usuario === 'luis' && contraseña === '1234') || (usuario === 'fabiola' && contraseña === '1234') || (usuario === 'fernando' && contraseña === '1234') || (usuario === 'mirna' && contraseña === '1234') || (usuario === 'emerson' && contraseña === '1234')) {
         window.location.href = 'dashboard.html';
     } else {
-        alert('Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.');
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor, introduzca las credenciales correctas.'
+        });
     }
 }
 
